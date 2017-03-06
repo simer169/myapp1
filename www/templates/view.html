@@ -1,0 +1,28 @@
+<ion-header-bar class="bar bar-header bar-positive"> 
+   <a ng-href="/">
+		<i class="fa fa-long-arrow-left light " aria-hidden="true"></i>
+	</a>
+  <h1 class="title">Movie details</h1>
+</ion-header-bar>
+<ion-content>
+  <div class="list card">
+ 
+    <div class="item item-avatar">
+	
+      <img ng-src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}">
+      <h2>{{movie.original_title}}</h2>
+      <p>{{movie.release_date}}</p>
+    </div>
+ 
+    <div class="item item-image">
+      <img ng-src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" width="200px" onerror="this.src = 'https://www.ginesisnatural.com/images/no_image.jpg';" />
+    </div>
+ 
+    <p class="item" >
+        Average Vote: <strong>{{movie.vote_average}}</strong> (Votes: {{movie.vote_count}})
+    </p>
+	<p>
+        Description: {{movie.overview}}</p>
+    </p>
+	</div>
+</ion-content>
